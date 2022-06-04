@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Alterar Cargo</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cargo.nome" name="nome">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateCargo()" color="primary">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
+
+
+
+

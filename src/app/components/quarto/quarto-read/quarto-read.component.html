@@ -1,0 +1,36 @@
+<div class="mat-elevation-z4">
+    <table mat-table [dataSource]="quartos">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="numero">
+        <th mat-header-cell *matHeaderCellDef>Numero</th>
+        <td mat-cell *matCellDef="let row">{{row.numero}}</td>
+      </ng-container>
+
+      <
+      <ng-container matColumnDef="acao">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>                     
+        <td mat-cell *matCellDef="let row">
+            <a routerLink="/quartos/update/{{ row.id }}" class="edit">
+                <i class="material-icons">
+                    edit
+                </i>
+            </a>
+            
+            <a routerLink="/quartos/delete/{{ row.id }}" class="delete"> 
+                <i class="material-icons">
+                    delete
+                </i>
+            </a>
+        </td>
+
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

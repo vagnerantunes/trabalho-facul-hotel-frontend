@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Alterar Hospedagem</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Entrada" [(ngModel)]="hospedagem.entrada" name="entrada">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Saida" [(ngModel)]="hospedagem.saida" name="saida">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateHospedagem()" color="primary">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>

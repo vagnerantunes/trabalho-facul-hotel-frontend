@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Excluir Hospede</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="hospede.nome" name="nome" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" [value]="hospede.cpf" name="cpf" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteHospede()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>

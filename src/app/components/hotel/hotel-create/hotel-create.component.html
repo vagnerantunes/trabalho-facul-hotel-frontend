@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Novo Hotel</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome Fantasia" [(ngModel)]="hotel.nomeFantasia" name="nomeFantasia">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CNPJ" [(ngModel)]="hotel.cnpj" name="cnpj">
+        </mat-form-field>
+        
+    </form>
+
+    <button mat-raised-button (click)="createHotel()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
